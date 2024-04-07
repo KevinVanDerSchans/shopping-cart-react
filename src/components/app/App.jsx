@@ -3,24 +3,20 @@ import { Header } from '../Header/Header'
 import { products as initialProducts } from '../../mocks/products.json'
 import { Products } from '../Products/Products'
 import { Footer } from '../Footer/Footer'
-import { IS_DEVELOPMENT} from '../../config'
+import { IS_DEVELOPMENT } from '../../config'
 import './App.css'
 
-function useFilters () {
-
+function useFilters() {
   const [filters, setFilters] = useState({
     category: 'all',
-    minPrice: 0
+    minPrice: 0,
   })
 
   const filterProducts = (products) => {
-    return products.filter(product => {
+    return products.filter((product) => {
       return (
         product.price >= filters.minPrice &&
-        (
-          filters.category === 'all' ||
-          product.category === filters.category
-        )
+        (filters.category === 'all' || product.category === filters.category)
       )
     })
   }
@@ -37,8 +33,8 @@ function App() {
   return (
     <>
       <Header changeFilters={setFilters} />
-      <Products products={filteredProducts}/>
-      {IS_DEVELOPMENT && <Footer filters={filters}/>}
+      <Products products={filteredProducts} />
+      {IS_DEVELOPMENT && <Footer filters={filters} />}
     </>
   )
 }

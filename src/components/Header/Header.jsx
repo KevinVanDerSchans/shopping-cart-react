@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
-import { Filters } from "../Filters/Filters"
+import { Filters } from '../Filters/Filters'
 
-export function Header ({ changeFilters }) {
+export function Header({ changeFilters }) {
   return (
     <header>
       <h1>Shopping ReactCart</h1>

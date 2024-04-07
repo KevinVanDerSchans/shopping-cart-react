@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
 import { useState, useId } from 'react'
 import './Filters.css'
 
-export function Filters ({ onChange }) {
+export function Filters({ onChange }) {
   const [minPrice, setMinPrice] = useState(0)
 
   const minPriceFilterId = useId()
@@ -10,26 +9,25 @@ export function Filters ({ onChange }) {
 
   const handleChangeMinPrice = (event) => {
     setMinPrice(event.target.value)
-    onChange(prevState => ({
+    onChange((prevState) => ({
       ...prevState,
-      minPrice: event.target.value
+      minPrice: event.target.value,
     }))
   }
 
   const handleChangeCategory = (event) => {
-    onChange(prevState => ({
+    onChange((prevState) => ({
       ...prevState,
-      category: event.target.value
+      category: event.target.value,
     }))
   }
 
   return (
-    <section className="filters">
-
+    <section className='filters'>
       <div>
         <label htmlFor={minPriceFilterId}>Min. price</label>
         <input
-          type="range"
+          type='range'
           id={minPriceFilterId}
           min='0'
           max='1000'
@@ -39,18 +37,15 @@ export function Filters ({ onChange }) {
       </div>
 
       <div>
-        <label
-          onChange={handleChangeCategory}
-          htmlFor={categoryFilterId}>
-            Category
+        <label onChange={handleChangeCategory} htmlFor={categoryFilterId}>
+          Category
         </label>
         <select id={categoryFilterId}>
-          <option value="all">All</option>
-          <option value="laptops">Laptops</option>
-          <option value="smartphones">Smartphones</option>
+          <option value='all'>All</option>
+          <option value='laptops'>Laptops</option>
+          <option value='smartphones'>Smartphones</option>
         </select>
       </div>
-
     </section>
   )
 }

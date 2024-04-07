@@ -1,17 +1,13 @@
-/* eslint-disable react/prop-types */
 import './Products.css'
 import { AddToCartIcon } from '../Icons/Icons'
 
-export function Products ({ products }) {
+export function Products({ products }) {
   return (
     <main className='products'>
       <ul>
-        {products.map(product => (
+        {products.map((product) => (
           <li key={product.id}>
-            <img
-              src={product.thumbnail}
-              alt={product.title}
-            />
+            <img src={product.thumbnail} alt={product.title} />
 
             <div>
               <strong>{product.title}</strong> - {product.price}€
@@ -25,7 +21,6 @@ export function Products ({ products }) {
           </li>
         ))}
       </ul>
-
     </main>
   )
 }
