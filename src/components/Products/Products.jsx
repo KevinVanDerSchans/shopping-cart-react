@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import './Products.css'
-import { AddToCartIcon } from '../Icons/Icons.jsx'
+import { AddToCartIcon } from '../Icons/Icons'
 
 export function Products ({ products }) {
   return (
