@@ -3,9 +3,31 @@ import { useCart } from '../../hooks/useCart'
 import { CartIcon, ClearCartIcon } from '../Icons/Icons'
 import './Cart.css'
 
+function CartItem({ thumbnail, price, title, quantity, addToCart }) {
+  return (
+    <li>
+      <img src={thumbnail} alt={title} />
+
+      <div>
+        <strong>
+          {title} - {price}€
+        </strong>
+      </div>
+
+      <footer>
+        <button>Qty: {quantity}</button>
+
+        <button onClick={addToCart} style={{ color: '#fff' }}>
+          +
+        </button>
+      </footer>
+    </li>
+  )
+}
+
 export function Cart() {
   const cartCheckboxId = useId()
-  const { cart, clearCart } = useCart()
+  const { cart, clearCart, addToCart } = useCart()
 
   return (
     <>
@@ -16,19 +38,13 @@ export function Cart() {
 
       <aside className='cart'>
         <ul>
-          <li>
-            <img src='' alt='Iphone' />
-
-            <div>
-              <strong>iPhone - 1500€</strong>
-            </div>
-
-            <footer>
-              <small>Qty: 1</small>
-
-              <button style={{ color: '#fff' }}>+</button>
-            </footer>
-          </li>
+          {cart.map((product) => (
+            <CartItem
+              key={product.id}
+              {...product}
+              addToCart={() => addToCart(product)}
+            />
+          ))}
         </ul>
 
         <button onClick={clearCart}>
