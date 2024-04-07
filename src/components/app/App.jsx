@@ -6,6 +6,7 @@ import { Products } from '../Products/Products'
 import { Footer } from '../Footer/Footer'
 import { IS_DEVELOPMENT } from '../../config'
 import './App.css'
+import { Cart } from '../Cart/Cart'
 
 function App() {
   const [products] = useState(initialProducts)
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Header />
+      <Cart />
       <Products products={filteredProducts} />
       {IS_DEVELOPMENT && <Footer />}
     </>
