@@ -15,7 +15,7 @@ function CartItem({ thumbnail, price, title, quantity, addToCart }) {
       </div>
 
       <footer>
-        <button>Qty: {quantity}</button>
+        <button style={{ color: '#fff' }}>Qty: {quantity}</button>
 
         <button onClick={addToCart} style={{ color: '#fff' }}>
           +
