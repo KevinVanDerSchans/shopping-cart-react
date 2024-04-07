@@ -1,3 +1,5 @@
+import { products } from '../../mocks/products.json'
+import { Products } from '../Products/Products'
 import './App.css'
 
 function App() {
@@ -5,7 +7,9 @@ function App() {
   return (
     <>
       <div>
-        <span>Shopping cart</span>
+        <h1>Shopping cart</h1>
+        <Products products={products}/>
+
       </div>
     </>
   )
