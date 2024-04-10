@@ -60,7 +60,7 @@ https://ks-shopping-cart-react.vercel.app
 
     ✔️ Add more quantities to cart
 
-    ✔️ Clear shopping cart.
+    ✔️ Clear shopping cart
 
 </div>
 
