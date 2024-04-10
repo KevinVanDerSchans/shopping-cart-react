@@ -8,7 +8,7 @@
   <img
     src="public/readme/project-overview.png"
     alt="Project overview"
-    width="850"
+    width="550"
   >
 </div>
 
