@@ -29,7 +29,9 @@ export function Products({ products }) {
                     backgroundColor: isProductInCart ? 'red' : '#09f',
                   }}
                   onClick={() => {
-                    isProductInCart ? removeFromCart(product) : addToCart(product)
+                    isProductInCart
+                      ? removeFromCart(product)
+                      : addToCart(product)
                   }}
                 >
                   {isProductInCart ? <RemoveFromCartIcon /> : <AddToCartIcon />}
