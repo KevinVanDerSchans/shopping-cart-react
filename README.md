@@ -16,7 +16,7 @@
 
 <div>
 
-    Basic shopping cart using useContext and useReducer.
+    Basic shopping cart using useContext and useReducer
 
 </div>
 
