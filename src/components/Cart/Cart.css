@@ -11,6 +11,7 @@
 .cart img {
   aspect-ratio: 16/9;
   width: 100%;
+  border-radius: 30px;
 }
 
 .cart li {
@@ -27,6 +28,7 @@
 
 .cart footer button {
   padding: 8px;
+  margin-top: 20px;
 }
 
 .cart-button {

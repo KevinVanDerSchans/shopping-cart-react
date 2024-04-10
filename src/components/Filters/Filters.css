@@ -9,5 +9,24 @@
 .filters > div {
   display: flex;
   gap: 1rem;
-  outline: 'none';
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+}
+
+.filter-select {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 700;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+.filter-select option {
+  background-color: #eee;
+  color: #333;
 }
